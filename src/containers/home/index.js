@@ -57,7 +57,7 @@ export default function Home(props) {
             <TextField label='What service do you need?' variant="outlined" margin="normal" fullWidth></TextField>
             <Button variant="contained">Search</Button>
 
-            <Grid container className={classes.serviceList}>
+            <Grid container className={classes.serviceList} alignItems="center">
                 <Grid item xs={1}>
                     <Button><ArrowBackIosIcon></ArrowBackIosIcon></Button>
                 </Grid>

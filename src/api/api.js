@@ -1,4 +1,4 @@
-import { API_KEY } from "./API_KEY";
+import { NASA_API_KEY, STOCK_API_KEY } from "./API_KEY";
 const axios = require("axios");
 // NASA Astronomy Picture of the Day
 // https://apod.nasa.gov/apod/astropix.html
@@ -15,7 +15,7 @@ const nasa = axios.create({
 export const nasaAPODAPI = (data) =>
   nasa.get('', {
     params: {
-      api_key: API_KEY,
+      api_key: NASA_API_KEY,
       date: data,
     },
   });

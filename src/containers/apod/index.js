@@ -15,7 +15,11 @@ import {
   Avatar,
   TextField,
   CircularProgress,
+  CardHeader,
+  IconButton,
+  Grid,
 } from "@material-ui/core";
+import ShareIcon from "@material-ui/icons/Share";
 
 class APOD extends React.Component {
   constructor(props) {
@@ -39,26 +43,34 @@ class APOD extends React.Component {
   }
 
   async handleDateChange(e) {
-    let target = new Date(e.target.value);
-    let today = new Date(moment().format('YYYY-MM-DD'));
+    let newDate = e.target.value;
+    let target = new Date(newDate);
+    let today = new Date(moment().format("YYYY-MM-DD"));
     if (target > today) {
       window.alert("Please choose a date before today");
       return;
     }
-    await this.getData(e.target.value);
-    await this.setState({ isLoading: false })
+    this.setState({ isLoading: true });
+    await this.getData(newDate);
+    this.setState({ isLoading: false });
   }
 
   async componentDidMount() {
     await this.getData(moment().format("YYYY-MM-DD"));
-    await this.setState({ isLoading: false });
+    this.setState({ isLoading: false });
   }
 
   render() {
     const { isLoading } = this.state;
     const { dataSource } = this.props;
     return (
-      <Box display="flex" flexDirection="column" alignItems="center" pt={2} pb={1}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        pt={2}
+        pb={1}
+      >
         <Box display="flex" alignItems="center" justify="stretch" mt={1} mb={2}>
           <Avatar src="https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg" />
           <Typography
@@ -87,6 +99,26 @@ class APOD extends React.Component {
             style={{ width: "auto", height: "800px", margin: "2rem" }}
           ></img>
         )}
+
+        <Card style={{ padding: "1rem", width: "60%" }}>
+          <CardHeader
+            avatar={
+              <Avatar aria-label="photographer">
+                {dataSource.copyright.slice(0, 1)}
+              </Avatar>
+            }
+            action={
+              <IconButton aria-label="share">
+                <ShareIcon />
+              </IconButton>
+            }
+            title="About this picture"
+            subheader={dataSource.copyright}
+          />
+          <CardContent>
+            <Typography>{dataSource.explanation}</Typography>
+          </CardContent>
+        </Card>
       </Box>
     );
   }

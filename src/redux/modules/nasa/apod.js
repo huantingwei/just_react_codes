@@ -20,7 +20,7 @@ const initialState = {
         media_type: 'image',
         service_version: 'v1',
         title: 'No Astronomy Picture of the Day available...', 
-        url: ""
+        url: ''
     }
 }
 

@@ -30,6 +30,7 @@ export default function Nav(props) {
             <MenuIcon />
           </IconButton> */}
           <Avatar src="https://images.theconversation.com/files/93616/original/image-20150902-6700-t2axrz.jpg?ixlib=rb-1.1.0&q=45&auto=format&w=754&h=754&fit=crop&dpr=1" className={classes.avatar} />
+          
           <Grid container className={classes.menuBar}>
             <Grid item xs={1}>
                 <Link to='/' className={classes.menuBtn}>
@@ -42,6 +43,11 @@ export default function Nav(props) {
                 </Link>
             </Grid>
             <Grid item xs={1}>
+                <Link to='/apod' className={classes.menuBtn}>
+                    <Button color="default">APOD</Button>
+                </Link>
+            </Grid>
+            <Grid item xs={1}>
                 <Link to='/login' className={classes.menuBtn}>
                     <Button color="default" variant="contained">Login</Button>
                 </Link>
@@ -49,16 +55,5 @@ export default function Nav(props) {
           </Grid>
         </Toolbar>
       </AppBar>
-        // <Box p={2} m={2} display='flex' justifyContent='flex-end'>
-        //     <Link to='/'>
-        //         <Button>Home</Button>
-        //     </Link>
-        //     <Link to='/about'>
-        //         <Button>About</Button>
-        //     </Link>
-        //     <Link to='/login'>    
-        //         <Button>Login</Button>
-        //     </Link>
-        // </Box>
     )
 }

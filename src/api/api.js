@@ -1,4 +1,4 @@
-import { NASA_API_KEY, STOCK_API_KEY } from "./API_KEY";
+import { NASA_API_KEY } from "./API_KEY";
 const axios = require("axios");
 // NASA Astronomy Picture of the Day
 // https://apod.nasa.gov/apod/astropix.html

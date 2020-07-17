@@ -1,5 +1,5 @@
 import React from 'react';
-import { Typography, Container, Paper, Divider } from '@material-ui/core';
+import { Typography, Container, Paper } from '@material-ui/core';
 import './index.scss'
 
 export default function About(props) {

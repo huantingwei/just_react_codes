@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, Container, TextField, Button, Card, CardActionArea,
-     CardMedia, CardContent, CardActions, Grid, Divider } from '@material-ui/core'
+     CardMedia, CardContent, CardActions, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';

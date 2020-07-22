@@ -1,6 +1,6 @@
 import React from 'react'
 import { Typography, Container, TextField, Button, Card, CardActionArea,
-     CardMedia, CardContent, CardActions, Grid, Divider } from '@material-ui/core'
+     CardMedia, CardContent, CardActions, Grid } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
 import ArrowBackIosIcon from '@material-ui/icons/ArrowBackIos';
 import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
@@ -52,8 +52,8 @@ export default function Home(props) {
     return (
         <React.Fragment>
         <Container className={classes.main}>
-            <Typography variant='h3' >ROSS</Typography>
-            <Typography gutterBottom variant='h5'>An Integrated Reservation Platform for On-Site Services</Typography>
+            <Typography variant='h3' >Hello</Typography>
+            <Typography gutterBottom variant='h5'>This is an experimental site built with React and Material UI!</Typography>
             <TextField label='What service do you need?' variant="outlined" margin="normal" fullWidth></TextField>
             <Button variant="contained">Search</Button>
 

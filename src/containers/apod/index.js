@@ -1,5 +1,4 @@
 import React, { Fragment } from "react";
-import PropTypes from "prop-types";
 import moment from "moment";
 import { connect } from "react-redux";
 import { Actions } from "redux/modules/nasa/apod";
@@ -8,16 +7,13 @@ import { nasaAPODAPI } from "api/api";
 import {
   Box,
   Typography,
-  Paper,
   Card,
-  CardMedia,
   CardContent,
   Avatar,
   TextField,
   CircularProgress,
   CardHeader,
   IconButton,
-  Grid,
 } from "@material-ui/core";
 import ShareIcon from "@material-ui/icons/Share";
 
@@ -68,7 +64,7 @@ class APOD extends React.Component {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        pt={2}
+        pt={5}
         pb={1}
       >
         <Box display="flex" alignItems="center" justify="stretch" mt={1} mb={2}>
@@ -95,16 +91,16 @@ class APOD extends React.Component {
           <CircularProgress />
         ) : (
           <img
-            src={dataSource.url}
+            src={dataSource.url} alt={dataSource.title}
             style={{ width: "auto", height: "800px", margin: "2rem" }}
           ></img>
         )}
 
-        <Card style={{ padding: "1rem", width: "60%" }}>
+        <Card style={{ padding: "1rem", margin: "2rem", width: "60%" }}>
           <CardHeader
             avatar={
               <Avatar aria-label="photographer">
-                {dataSource.copyright.slice(0, 1)}
+                {dataSource.copyright ? dataSource.copyright.slice(0, 1) : ''}
               </Avatar>
             }
             action={
@@ -123,9 +119,6 @@ class APOD extends React.Component {
     );
   }
 }
-
-// APOD.propTypes = {
-// };
 
 function mapStateToProp(state) {
   return {

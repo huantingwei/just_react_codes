@@ -52,8 +52,8 @@ export default function Home(props) {
     return (
         <React.Fragment>
         <Container className={classes.main}>
-            <Typography variant='h3' >ROSS</Typography>
-            <Typography gutterBottom variant='h5'>An Integrated Reservation Platform for On-Site Services</Typography>
+            <Typography variant='h3' >Hello</Typography>
+            <Typography gutterBottom variant='h5'>This is an experimental site built with React and Material UI!</Typography>
             <TextField label='What service do you need?' variant="outlined" margin="normal" fullWidth></TextField>
             <Button variant="contained">Search</Button>
 

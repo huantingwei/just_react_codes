@@ -96,11 +96,11 @@ class APOD extends React.Component {
           ></img>
         )}
 
-        <Card style={{ padding: "1rem", width: "60%" }}>
+        <Card style={{ padding: "1rem", margin: "2rem", width: "60%" }}>
           <CardHeader
             avatar={
               <Avatar aria-label="photographer">
-                {dataSource.copyright.slice(0, 1)}
+                {dataSource.copyright ? dataSource.copyright.slice(0, 1) : ''}
               </Avatar>
             }
             action={

@@ -10,9 +10,6 @@ import Quote from "containers/quote";
 
 
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-  }
   render() {
     return (
         <Fragment>

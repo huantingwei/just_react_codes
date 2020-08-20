@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React from "react";
 import moment from "moment";
 import { connect } from "react-redux";
 import { Actions } from "redux/modules/nasa/apod";

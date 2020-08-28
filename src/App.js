@@ -1,12 +1,12 @@
-import React, { Fragment } from "react";
+import React, { Fragment } from "react"
 import { connect } from 'react-redux'
-import { Switch, Route, withRouter } from "react-router-dom";
-import Login from "containers/login";
-import Nav from "containers/nav";
-import Home from "containers/home";
-import About from "containers/about";
-import APOD from "containers/apod";
-import Quote from "containers/quote";
+import { Switch, Route, withRouter } from "react-router-dom"
+import Login from "containers/login"
+import Nav from "containers/nav"
+import Home from "containers/home"
+import About from "containers/about"
+import APOD from "containers/apod"
+import Quote from "containers/quote"
 
 
 class App extends React.Component {
